@@ -1,0 +1,576 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --signup-txt-color: rgb(163, 163, 159);
+}
+
+body {
+    /* min-height: 100vh; */
+    /* min-width: 100vw; */
+    background-color: black;
+    font-size: 14px;
+}
+
+/* ===================  Section Container  ======================= */
+#signUpPage {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.321);
+}
+
+/* ===================  Main Header Page / Header Container  ======================= */
+#headerContainer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: rosybrown; */
+}
+
+/* ===================  Head Page / Main Section  ======================= */
+#headPage {
+    height: auto;
+    width: 350px;
+    /* background-color: thistle; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.267); */
+}
+
+/* ===================  Center Page / SignUp Section ======================= */
+#signUpSection {
+    height: auto;
+    width: 350px;
+    /* background-color: tomato; */
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(68, 68, 68, 0.816);
+    margin-top: 12px;
+}
+
+/* ===================  Logo Container  ======================= */
+#logoContainer {
+    height: 111px;
+    width: 225px;
+    /* background-color: turquoise; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    margin-top: 5px;
+    margin-bottom: -18px;
+}
+
+#logoContainer img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+/* ===================  SignUp Container  ======================= */
+#signUpContainer {
+    height: auto;
+    width: 348.4px;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--signup-txt-color);
+}
+
+/* ===================  Form Container  ======================= */
+#formContainer {
+    height: auto;
+    width: 348.4px;
+    /* background-color: brown; */
+    color: var(--signup-txt-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    margin: 0px;
+    padding: 0px;
+    gap: 5px;
+}
+
+/* ===================  H4 Content  ======================= */
+#h4Content {
+    height: 40px;
+    width: 268.4px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    /* font-weight: 400; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    line-height: 20px;
+    text-wrap: wrap;
+    word-break: break-word;
+}
+
+/* ===================  Log In Facebook  ======================= */
+#fbDiv {
+    height: 33.6px;
+    width: 268.4px;
+    margin-top: 15px;
+}
+
+#fbDiv button {
+    height: 33.6px;
+    width: 268.4px;
+    background-color: rgb(74, 93, 249);
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+#fbDiv>.facebook-login>span {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+    margin-top: 50px;
+}
+
+.fa-square-facebook {
+    font-size: 18px;
+}
+
+/* ===================  OR Divider  ======================= */
+#orDiv {
+    height: 14.9875px;
+    width: 268.4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 40px 18px 40px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ===================  Line Container 1  ======================= */
+#lineContainer1 {
+    height: 0.8px;
+    width: 107.23px;
+    background-color: rgba(165, 165, 165, 0.27);
+    /* margin-right: 18px; */
+}
+
+/* ===================  OR Container  ======================= */
+#orContainer {
+    height: 14.9875px;
+    width: 17.925px;
+    margin: 0px 18px;
+    font-size: 13px;
+}
+
+/* ===================  Line Container 2  ======================= */
+#lineContainer2 {
+    height: 0.8px;
+    width: 107.23px;
+    background-color: rgba(165, 165, 165, 0.27);
+}
+
+/* ===================  Input Fields  ======================= */
+.inputFields {
+    /* height: 250px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    gap: 6px;
+}
+
+.input-group {
+    /* height: 37.6px; */
+    width: 268.4px;
+    margin: 0px 40px 0px 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input {
+    width: 100%;
+    height: 36px;
+    padding: 14px 10px 6px 10px;
+    /* Top padding for label */
+    border: 1px solid #ffffff42;
+    border-radius: 2px;
+    background-color: #121212;
+    color: #ffffff;
+    font-size: 12px;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    left: 5px;
+    top: 9.5px;
+    color: #e2dfdfbd;
+    font-size: 12px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    top: 2px;
+    left: 5px;
+    font-size: 10px;
+    color: #e2dfdfbd;
+    padding: 0 5px;
+
+}
+
+/* ==============  Eye Icon Styling  ============== */
+
+#togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+#togglePassword:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==============  Error Message  ============== */
+.error-message {
+    display: none;
+    width: 268.4px;
+    color: #ff4d4f;
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 6px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+}
+
+.error-message.active {
+    display: block;
+}
+
+/* ============== Errors when Active =============== */
+.input-group.error .error-message {
+    display: block;
+}
+
+/* ===================  Polcy Text  ======================= */
+#policyText {
+    height: 75px;
+    width: 268.4px;
+    margin: 10px 40px 10px 40px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#policyText span a:visited {
+    text-decoration: none;
+    color: rgb(112, 141, 255);
+}
+
+#policyText span a:active {
+    text-decoration: none;
+    color: rgba(112, 141, 255, 0.285);
+}
+
+#policyText span a:link {
+    text-decoration: none;
+    color: rgb(112, 141, 255);
+}
+
+/* ===================  Sign Up Button  ======================= */
+#btnDiv {
+    height: 48px;
+    width: 348.4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 40px 15px 40px;
+}
+
+#btnDiv button {
+    height: 32px;
+    width: 268.4px;
+    background-color: rgb(52, 65, 175);
+    color: var(--signup-txt-color);
+    font-weight: 580;
+    border: none;
+    border-radius: 8px;
+    border-color: rgba(245, 245, 245, 0.616);
+    opacity: 0.3;
+    cursor: default;
+    transition: background-color 0.1s ease, opacity 0.3s ease;
+}
+
+/* ================= Enable Btton when Active =================== */
+#btnDiv button.active {
+    background-color: rgb(0, 149, 246);
+    /* Instagram blue */
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* ===================  Login Section  ======================= */
+#loginSection {
+    height: 80.6px;
+    width: 350px;
+    /* background-color: cadetblue; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(68, 68, 68, 0.816);
+    /* margin-top: 18px; */
+}
+
+#loginContainer {
+    height: 80.6px;
+    width: 350px;
+    /* background-color: chocolate; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#loginContainer a {
+    text-decoration: none;
+    color: rgb(112, 141, 255);
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+/* ===================  App Section  ======================= */
+#appSection {
+    height: 94.6px;
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#appContainer {
+    height: 94.6px;
+    width: 350px;
+    /* background-color: chocolate; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#appContainer span {
+    color: #fff;
+    /* or a visible color */
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+#appContainer #storeLogos a {
+    height: 43.6px;
+    width: 134.275px;
+    margin: 0px 1px;
+    text-decoration: none;
+}
+
+#appContainer #storeLogos a img {
+    height: inherit;
+    width: inherit;
+    object-fit: contain;
+    border: none;
+    display: inline-block;
+    background: transparent;
+}
+
+/* ===================  Footer Container  ======================= */
+#footerContainer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+    /* justify-content: center; */
+    /* background-color: aquamarine; */
+}
+
+#footerContainer>#articleContainer {
+    height: 152px;
+    width: 100%;
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--signup-txt-color);
+    margin-bottom: 40px;
+    line-height: 18px;
+}
+
+#footerContainer>#articleContainer>#context1 {
+    height: 52px;
+    width: 100%;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+    /* background-color: lightpink; */
+}
+
+#footerContainer>#articleContainer>#context1>a {
+    text-decoration: none;
+    color: var(--signup-txt-color);
+}
+
+#footerContainer>#articleContainer>#context2 {
+    height: 12px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* background-color: lightgreen; */
+    gap: 10px;
+}
+
+#language {
+    background-color: black;
+    /* Black background for dropdown */
+    color: rgba(255, 255, 255, 0.53);
+    /* White text inside dropdown */
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    appearance: none;
+    /* Removes default OS styling (optional) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* =========================== RESPONSIVE LAYOUT =========================== */
+
+/* Landscape Mode */
+@media screen and (max-width: 1044px) {
+    #footerContainer {
+        padding: 20px 10px;
+    }
+
+    #footerContainer > #articleContainer {
+        margin-bottom: 20px;
+    }
+
+    #footerContainer > #articleContainer > #context1 {
+        flex-wrap: wrap;
+        /* allow wrapping */
+        gap: 14px;
+        /* smaller gap for mobile */
+        font-size: 12px;
+        /* smaller text */
+        line-height: 10px;
+        /* padding: 10px; */
+        margin-bottom: 15px;
+    }
+}
+
+/* Medium screens: Tablets */
+@media screen and (max-width: 940px) {
+
+    #footerContainer {
+        padding: 20px 10px;
+    }
+
+    #footerContainer > #articleContainer {
+        margin-bottom: 20px;
+    }
+
+    #footerContainer > #articleContainer > #context1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        line-height: 10px;
+        /* padding: 0px 5px 5px 0px; */
+    }
+}
+
+/* Mobile View */
+@media (max-width: 450px) {
+    #signUpSection {
+        border: none;
+        /* Instagram removes borders on very small screens */
+    }
+
+    #footerContainer {
+        padding: 20px 10px;
+    }
+
+    #footerContainer > #articleContainer {
+        margin-bottom: 20px;
+    }
+
+    #footerContainer > #articleContainer > #context1 {
+        flex-wrap: wrap;
+        /* allow wrapping */
+        gap: 14px;
+        /* smaller gap for mobile */
+        font-size: 12px;
+        /* smaller text */
+        line-height: 10px;
+        /* padding: 10px; */
+        margin-bottom: 15px;
+    }
+
+    #footerContainer > #articleContainer > #context2 {
+        width: auto;
+        /* remove fixed width */
+        flex-wrap: wrap;
+        font-size: 12px;
+        margin-top: 8px;
+        color: #a8a8a8;
+        /* Instagram light gray */
+    }
+
+}

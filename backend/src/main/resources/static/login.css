@@ -1,0 +1,604 @@
+:root{
+    --header-txt-color: #ffffff;
+    --footer-txt-color: rgb(168, 168, 168);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+/* ==============================    IG FullPage      ================================= */
+
+#mainPage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==============================    Main Header Page    ================================= */
+
+#mainContainer {
+    height: 80%;
+    width: 100%;
+    /* background-color: blanchedalmond; */
+    color: var(--header-txt-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* ==============================    Left Container (IMAGE Part)   ================================= */
+
+#imgSection {
+    height: 400px;
+    width: 550px;
+    /* background-color: rgb(172, 172, 103); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -40px;
+}
+
+#imgSection img.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==============================    Right Container (LOGIN Part)   ================================= */
+
+#loginSection {
+    height: 504px;
+    width: 350px;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+#loginContainer {
+    height: 407px;
+    width: 350px;
+    margin: 10px 0px 0px 0px ;
+    /* background-color: rgba(0, 0, 0, 0.848); */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+/* ==============================   INSTAGRAM LOGO    ================================= */
+
+#logoContainer {
+    height: 79px;
+    width: 230px;
+    /* background-color: cadetblue; */
+    margin-bottom: -15px;
+}
+
+#logoContainer img {
+    height: 79px;
+    width: 230px;
+    /* object-fit: contain; */
+}
+
+/* ==============================   FORM CONTAINER    ================================ */
+
+#formContainer {
+    height: 276px;
+    width: 350px;
+    /* background-color: coral; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* gap: 100px; */
+}
+
+#formContainer #userInp, #passInp, #btnDiv, #orDiv, #fbDiv, #frgtDiv {
+    height: 37.6px;
+    width: 270px;
+    /* background-color: burlywood; */
+    /* margin: 2px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==============================   INPUT BOX    ================================ */
+
+#userInp, #passInp {
+    margin: 7px 0px 0px 0px;
+}
+
+/* #userInp > input {
+    height: 36px;
+    width: inherit;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 7px 0px 7px 8px;
+    border: 1px solid #ffffff73;
+    
+}   
+
+#passInp > input {
+    height: 36px;
+    width: inherit;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    border-color: rgba(245, 245, 245, 0.578);
+    padding: 7px 0px 7px 8px;
+    border: 1px solid #ffffff73;
+}
+
+input {
+    background-color: #ffffff1a;    
+    color: #ffffff;               
+    border: 1px solid #dbdbdb;   
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+} */
+    /* Make input cursor and text smaller on focus */
+    input:focus {
+        font-size: 6px; /* Adjust this value for desired cursor size */
+    }
+
+/* input::placeholder {
+    color: #e2dfdfbd;
+    font-size: 12px;
+}  */
+
+.input-group {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 40px 6px 10px; /* Top padding larger to accommodate label inside */
+    border: 1px solid #ffffff73;
+    border-radius: 2px;
+    background-color: #6d6d6d32;    /* IG-style dark input */
+    color: #ffffff;
+    font-size: 12px;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: #e2dfdfbd;
+    font-size: 12px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 2px;
+    left: 5px;
+    font-size: 10px;
+    color: #e2dfdfbd;
+    /* background-color: transparent;  Matches IG input background when floating */
+    padding: 0 5px;
+}
+
+/* ==============  Eye Icon Styling  ============== */
+
+#togglePassword {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+#togglePassword:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==============================   LOG IN BUTTON    ================================ */
+
+#btnDiv {
+    margin-top: 10px;
+}
+
+#btnDiv > button {
+    height: 32px;
+    width: 270px;
+    background-color: rgb(52,65,175);
+    color: rgba(255, 255, 255, 0.719);
+    font-weight: 580;
+    border: none;
+    border-radius: 8px;
+    border-color: rgba(245, 245, 245, 0.616);
+    opacity: 0.3;
+    cursor: default;
+    transition: background-color 0.1s ease, opacity 0.3s ease;
+    /* font-weight: bold; */
+}
+
+#btnDiv > button:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+#btnDiv > button:enabled {
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgb(74, 93, 249);  /* Bright blue when enabled */
+}
+
+#btnDiv > button:enabled:hover {
+    background-color: rgba(74, 94, 249, 0.79);  /* Darker blue on hover */
+}
+
+/* ==============================   OR DIV    ================================ */
+
+#orDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+    margin: 3px 0px 0px 0px;
+}
+
+#orContainer span {
+    color: rgba(255, 255, 255, 0.719);;
+    font-size: 13px;
+}
+
+#lineContainer1 {
+    height: 1px;
+    width: 108px;
+    background-color: rgba(85, 85, 85, 0.349);
+    margin-left: 0px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lineContainer2 {
+    height: 1px;
+    width: 108px;
+    background-color: rgba(85, 85, 85, 0.349);
+    margin-right: 0px;
+    margin-left: 20px;
+}
+
+/* ==============================   FB LOGIN    ================================ */
+
+#fbDiv {
+    margin: 5px 0px 0px 0px;
+}
+
+#fbDiv > span {
+    color: rgb(0, 149, 246);
+    font-size: 14px;
+}
+
+#fbDiv > span > a {
+    text-decoration: none;
+}
+
+#fbDiv > span > a:active, a:visited, a:link {
+    color: rgb(0, 149, 246);
+}
+
+#fbDiv > span > a:visited {
+    color: rgb(0, 149, 246);
+}
+
+#fbDiv > span > a:link {
+    color: rgb(0, 149, 246);
+}
+
+.facebook-login {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.facebook-logo {
+    background-color: black;  /* Facebook blue background */
+    border-radius: 75%;
+    /* padding: 4px; */
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.facebook-logo path {
+    fill: rgb(0, 149, 246);   /* Forces the 'f' to be black */
+}
+
+/* ==============================   ERROR MESSAGE    ================================ */
+
+#errorMsg {
+    height: 37.6px;
+    width: 270px;
+    color: #ed4956;        /* Instagram red error color */
+    font-size: 14px;
+    text-align: center;
+    margin-top: -12px;
+    margin-bottom: 25px;
+    /* margin-right: -100px; */
+    white-space: text;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* ==============================   FORGET PASSWORD?    ================================ */
+
+#frgtDiv {
+    margin-top: -20px;
+}
+
+#frgtDiv {
+    font-size: 14px;
+    /* font-weight: bold; */
+}
+
+#frgtDiv > a {
+    text-decoration: none;
+}
+
+#frgtDiv > a:hover {
+    text-decoration: underline;
+}
+
+#frgtDiv > a:link, a:active, a:visited {
+    color: white;    
+}
+
+/* ==============================   SIGN UP CONTAINER    ================================ */
+
+#signUpContainer {
+    height: 61px;
+    width: 350px;
+    /* background-color: rosybrown; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+#signUpContainer #signUpSection {
+    font-size: 14px;
+}
+#signUpContainer #signUpSection > a {
+    color: rgb(112, 141, 255)
+}
+
+/* ==============================    Footer Part   ================================= */
+
+footer {
+    height: 20%;
+    width: 100%;
+    color: var(--footer-txt-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+    margin-top: -30px;
+}
+
+/* ==============================   ARTICLE CONTAINER    ================================ */
+
+#footerContainer > article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ==============================   CONTEXT 1    ================================ */
+
+#footerContainer > article > #context1 {
+    margin-bottom: 15px;
+}
+
+#footerContainer > article > #context1 > span {
+    margin-right: 15px;
+}
+
+/* ==============================   CONTEXT 2    ================================ */
+
+#footerContainer > article > #context1 {
+    margin-bottom: -10px;
+}
+
+#footerContainer > article > #context2 > span {
+    margin-right: 15px;
+}
+
+#language {
+    background-color: black;    /* Black background for dropdown */
+    color: rgba(255, 255, 255, 0.53);               /* White text inside dropdown */
+    /* border: 1px solid #333;     /* Optional: Dark border */
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    appearance: auto;           /* Removes default OS styling (optional) */
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+}
+
+
+/* ========================================   RESPONSIVE LAYOUT   ========================================== */
+
+/* Landscape Mode */
+@media screen and (max-width: 1044px) {
+
+    #mainContainer {
+        flex-direction: column;  /* Stack image on top, login below */
+        align-items: center;
+        padding: 10px;
+        
+    }
+
+    #imgSection {
+        width: 80%;  /* Shrink image width */
+        height: auto;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: none;  /* Hide image to save space */
+    }
+
+    #footerContainer #context1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        /* padding: 0px 5px 5px 0px; */
+    }
+}
+
+/* Medium screens: Tablets */
+@media screen and (max-width: 944px) {
+    #mainContainer {
+        flex-direction: column;  /* Stack image on top, login below */
+        align-items: center;
+        padding: 10px;
+        margin-top: -70px;
+    }
+
+    #imgSection {
+        width: 80%;  /* Shrink image width */
+        height: auto;
+        display: none;  
+        margin-bottom: 10px;
+    }
+
+    #loginSection {
+        width: 80%;  /* Shrink login form width */
+    }
+
+    #footerContainer {
+        width: 95%;
+        /* padding: 0px 10px 10px 0px; */
+    }
+
+    #footerContainer #context1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        line-height: 20px;
+        padding: 0px 10px 20px 0px;
+    }
+
+    #footerContainer #context1 span {
+        cursor: pointer;
+        white-space: nowrap;
+        transition: color 0.2s;
+    }
+
+}
+
+/* Small screens: Mobile */
+@media screen and (max-width: 600px) {
+    #mainContainer {
+        flex-direction: column;
+        padding: 10px;
+        margin-top: -70px;
+    }
+
+    #imgSection {
+        width: 80%;
+        display: none;  /* Hide image to save space */
+    }
+
+    #loginSection {
+        width: 100%;   /* Full width for mobile */
+    }
+
+    #loginContainer {
+        width: 100%;
+    }
+
+    #logoContainer {
+        /* width: 70%;   /* Shrink logo on small screens */
+        margin-bottom: 10px;
+    }
+
+    #formContainer {
+        width: 100%;
+        gap: 50px; /* Adjust input spacing */
+        margin-bottom: -50px;
+    }
+    
+    #btnDiv > button {
+        width: 100%;
+    }
+
+    #formContainer {
+        width: 100%;
+        gap: 100px; /* Adjust input spacing */
+        margin-top: -40px;
+    }
+
+    #footerContainer > article {
+        width: 100%;
+        /* gap: 1px; */
+    }
+
+    #footerContainer #context1 {
+        line-height: 20px;
+        gap: 2px;
+        margin-top: 50px;
+    }
+    
+    #footerContainer #context2 {
+        /* line-height: 20px;
+        gap: 2px; */
+        margin-top: -10px;
+        margin-bottom: -20px;
+    }
+}
+
+.input-group input {
+    width: 100%;   /* Always full width inside container */
+    font-size: 14px;
+    padding: 12px 10px 6px 10px;
+}

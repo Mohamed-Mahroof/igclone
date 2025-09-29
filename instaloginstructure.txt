@@ -1,0 +1,93 @@
+section
+|_ main
+|  |_ImgDiv
+|  |  |_img
+|  |
+|  |_mainLoginContainer
+|     |_loginContainer
+|     |   |_logoContiner
+|     |   |   |_img
+|     |   |
+|     |   |_formContainer
+|     |
+|     |_signUpContainer
+|         |_signUpSection
+|             |_span
+|             |_anchor
+|
+|_ footer
+   |
+   |_article
+      |
+      |_ context1
+      |_ context2
+
+
+
+
+
+
+
+UPDATED Structure
+
+section
+│
+├── main
+│   ├── imgDiv
+│   │   └── img                      # (Phone mockup / banner image)
+│   │
+│   └── mainLoginContainer
+│       ├── loginContainer
+│       │   ├── logoContainer
+│       │   │   └── img              # Instagram logo
+│       │   │
+│       │   └── formContainer
+│       │       ├── input (username/email)
+│       │       ├── input (password)
+│       │       ├── button (login)
+│       │       ├── span (or divider "OR")
+│       │       └── anchor (Forgot password?)
+│       │
+│       └── signUpContainer
+│           └── signUpSection
+│               ├── span (Don’t have an account?)
+│               └── anchor (Sign up)
+│
+└── footer
+    └── article
+        ├── context1 (Links: About, Help, Privacy, Terms, etc.)
+        └── context2 (Language selector + © Year Instagram)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://static.
+
+
+
+
+
+
+
+
+
+
+

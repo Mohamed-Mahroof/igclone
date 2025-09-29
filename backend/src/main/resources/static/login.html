@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+    <!-- Full Front Page -->
+    <section id="mainPage">
+
+        <!-- Main Header Page -->
+        <header id="mainContainer">
+
+            <!-- Left Container for Image -->
+            <div id="imgSection">
+                <img src="./assets/Banner-Image.png" alt="Instagram Banner" class="banner-image">
+            </div>
+
+            <!-- Right Container for Login -->
+            <div id="loginSection">
+
+                <!-- Instagram Logo -->
+                <div id="loginContainer">
+                    <div id="logoContainer">
+                        <img src="./assets/Instagram-Wordmark-White-Logo.wine.svg" alt="Instagram-Logo">
+                    </div>
+
+                    <!-- Login Container -->
+                    <div id="formContainer">
+                        <form id="loginForm" action="">
+                            <div id="userInp" class="input-group">
+                                <input type="text" id="username" placeholder=" " required>
+                                <label for="username">Phone number, username or email address</label>
+                            </div>
+                            <div id="passInp" class="input-group">
+                                <input type="password" id="password" placeholder=" " required>
+                                <label for="password">Password</label>
+                                <i id="togglePassword" class="fa fa-eye"></i>
+                            </div>
+                            <div id="btnDiv">
+                                <button type="submit">Log in</button><br>
+                            </div>
+                            <div id="orDiv">
+                                <div id="lineContainer1"></div>
+                                <div id="orContainer">
+                                    <span><b>OR</b></span>
+                                </div>
+                                <div id="lineContainer2"></div>
+                            </div>
+                            <div id="fbDiv">
+                                <span class="facebook-login">
+                                    <!-- <img src="https://static.cdninstagram.com/rsrc.php/v3/yx/r/cF5ZaFHy3JG.png" alt="Facebook Logo"> -->
+                                    <!-- <i class="fab fa-facebook-square"></i> -->
+                                    <svg class="facebook-logo" aria-label="Facebook" viewBox="0 0 24 24" width="16" height="16">
+                                        <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.762v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
+                                    </svg>
+                                    <a href="https://www.facebook.com">Log in with Facebook</a>
+                                </span><br>
+                            </div><br>
+                            <div id="errorMsg" class="hidden">
+                                <span>Sorry, your password was incorrect. Please double-check your password.</span>
+                            </div>
+                            <div id="frgtDiv">
+                                <a href="https://www.instagram.com/accounts/password/reset/">Forgotten your
+                                    password?</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- SignUp Container -->
+                <div id="signUpContainer">
+                    <div id="signUpSection">
+                        <span>Don't have an account?</span>
+                        <a href="./signup.html"><b>Sign up</b></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Footer Page -->
+        <footer id="footerContainer">
+            <article>
+                <div id="context1">
+                    <span>Meta</span>
+                    <span>About</span>
+                    <span>Blog</span>
+                    <span>Jobs</span>
+                    <span>Help</span>
+                    <span>API</span>
+                    <span>Privacy</span>
+                    <span>Terms</span>
+                    <span>Locations</span>
+                    <span>Instagram Lite</span>
+                    <span>Meta AI</span>
+                    <span>Meta AI Articles</span>
+                    <span>Threads</span>
+                    <span>Contact Uploading and non-users</span>
+                    <span>Meta Verified</span>
+                </div>
+                <div id="context2">
+                    <span>
+                        <select name="language" id="language">
+                            <option value="en">English (UK)</option>
+                            <option value="fr">French</option>
+                            <option value="es">Spanish</option>
+                            <option value="de">German</option>
+                            <option value="it">Italian</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ru">Russian</option>
+                            <option value="ar">Arabic</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="hi">Hindi</option>
+                            <option value="bn">Bengali</option>
+                            <option value="pa">Punjabi</option>
+                            <option value="jv">Javanese</option>
+                            <option value="ko">Korean</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="tr">Turkish</option>
+                            <option value="pl">Polish</option>
+                            <option value="nl">Dutch</option>
+                            <option value="sv">Swedish</option>
+                            <option value="no">Norwegian</option>
+                            <option value="da">Danish</option>
+                            <option value="fi">Finnish</option>
+                            <option value="el">Greek</option>
+                            <option value="he">Hebrew</option>
+                            <option value="th">Thai</option>
+                        </select>
+                    </span>
+                    <span>
+                        © 2025 Instagram from Meta
+                    </span>
+                </div>
+            </article>
+        </footer>
+    </section>
+
+    <script src="./login.js"></script>
+</body>
+
+</html>
