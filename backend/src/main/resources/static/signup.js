@@ -113,20 +113,37 @@ form.addEventListener("submit", async (e) => {
   }
 
   // Prepare payload
+  // const payload = {
+  //   emailOrPhone: emailInput.value.trim(),
+  //   password: passwordInput.value.trim(),
+  //   username: usernameInput.value.trim(),
+  //   fullName: fullNameInput.value.trim(),
+  // };
+
+  // console.log("Email/Phone:", payload.emailOrPhone);
+  // console.log("Username:", payload.username);
+  // console.log("Password:", payload.password);
+  // console.log("Full Name:", payload.fullName);
+
+  // Prepare payload
+  const value = emailInput.value.trim();
+  const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+  const phonePattern = /^\d{10,15}$/;
+
   const payload = {
-    emailOrPhone: emailInput.value.trim(),
     password: passwordInput.value.trim(),
     username: usernameInput.value.trim(),
     fullName: fullNameInput.value.trim(),
   };
 
-  console.log("Email/Phone:", payload.emailOrPhone);
-  console.log("Username:", payload.username);
-  console.log("Password:", payload.password);
-  console.log("Full Name:", payload.fullName);
+  if (emailPattern.test(value)) {
+    payload.email = value;
+  } else if (phonePattern.test(value)) {
+    payload.phone = value;
+  }
 
   try {
-    const response = await fetch("/api/signup", {
+    const response = await fetch(window.location.origin + "/api/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
@@ -135,7 +152,6 @@ form.addEventListener("submit", async (e) => {
     const result = await response.json();
 
     if (response.ok) {
-      alert("Signup successful! You can now login.");
       window.location.href = "/login.html"; // redirect to login
     } else {
       // Show server errors if any
@@ -151,7 +167,7 @@ form.addEventListener("submit", async (e) => {
     }
   } catch (error) {
     console.error("Signup Error:", error);
-    alert("Something went wrong. Try again later.");
+    alert("Something went wrong. Try again later. " + (error && error.message ? error.message : ""));
   }
 });
 

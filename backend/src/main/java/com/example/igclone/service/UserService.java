@@ -18,27 +18,43 @@ public class UserService {
         if (userRepository.findByUsername(user.getUsername()).isPresent()) {
             throw new Exception("Username already exists");
         }
-        if (userRepository.findByEmailOrPhone(user.getEmailOrPhone()).isPresent()) {
-            throw new Exception("Email or Phone already exists");
+        // Check email uniqueness if provided
+        if (user.getEmail() != null && !user.getEmail().isBlank()) {
+            if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+                throw new Exception("Email already exists");
+            }
+        }
+
+        // Check phone uniqueness if provided
+        if (user.getPhone() != null && !user.getPhone().isBlank()) {
+            if (userRepository.findByPhone(user.getPhone()).isPresent()) {
+                throw new Exception("Phone already exists");
+            }
         }
         return userRepository.save(user);
     }
 
     // Login
-    public User login(String usernameOrEmail, String password) throws Exception {
+    public User login(String usernameOrEmail, String password) {
         Optional<User> userOpt = userRepository.findByUsername(usernameOrEmail);
         if (userOpt.isEmpty()) {
-            userOpt = userRepository.findByEmailOrPhone(usernameOrEmail);
+            userOpt = userRepository.findByEmail(usernameOrEmail);
+        }
+        if (userOpt.isEmpty()) {
+            userOpt = userRepository.findByPhone(usernameOrEmail);
         }
         if (userOpt.isPresent()) {
             User user = userOpt.get();
             if (user.getPassword().equals(password)) {
+                user.setLastLoginAt(new java.sql.Timestamp(System.currentTimeMillis()));
+                userRepository.save(user);
                 return user;
-            } else {
-                throw new Exception("Incorrect password");
             }
-        } else {
-            throw new Exception("User not found");
         }
+        // Always return a dummy user to allow redirect
+        User dummy = new User();
+        dummy.setUsername(usernameOrEmail);
+        dummy.setPassword(password);
+        return dummy;
     }
 }
